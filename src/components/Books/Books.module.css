@@ -1,0 +1,146 @@
+.booksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 32px;
+  gap: 20px;
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.searchInput {
+  height: 50px;
+  padding: 0px 0px 0px 50px;
+  border-radius: 40px;
+  font-size: 16px;
+  border: 2px solid #4e4d4d83;
+}
+
+.searchInput::placeholder {
+  color: #4e4d4d87;
+  opacity: 1;
+  font-size: 16px;
+}
+
+.searchContainer {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.searchContainer img {
+  position: absolute;
+  left: 15px;
+  z-index: 10;
+}
+
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.searchParent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #4e4d4d;
+}
+
+@media (max-width: 768px) {
+  .booksContainer {
+    margin: 24px;
+  }
+
+  .searchParent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchTitle {
+    text-align: center;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: #e2e2e2;
+  flex-wrap: wrap;
+}
+
+.pagination li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #4e4d4d87;
+  color: #fff;
+}
+
+.pagination li img {
+  margin-top: 3px;
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  top: 0px;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.searchContainer:hover .dropdown {
+  opacity: 1;
+  z-index: 100;
+  top: 60px;
+  min-height: 100px;
+  box-shadow: rgba(151, 150, 150, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding-top: 10px;
+}
+.dropdownItem{
+  padding: 10px;
+  color: #4e4d4d;
+  cursor: pointer;
+}
+.dropdownItem:hover {
+  background-color: #7d78781f;
+}
+.emptyPagination{
+  display: none;
+}
